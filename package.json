@@ -1,0 +1,26 @@
+{
+  "name": "mijn_api",
+  "version": "1.0.0",
+  "description": "my second repo for my custom api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BBR2394/TestAPINodeJS.git"
+  },
+  "keywords": [
+    "NodeJs",
+    "api"
+  ],
+  "author": "Baptiste BR",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BBR2394/TestAPINodeJS/issues"
+  },
+  "homepage": "https://github.com/BBR2394/TestAPINodeJS#readme",
+  "dependencies": {
+    "passport": "^0.7.0"
+  }
+}
