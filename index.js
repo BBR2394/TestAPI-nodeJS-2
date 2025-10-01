@@ -44,6 +44,7 @@ app.get('/companies/:id', async (req, res) => {
     console.log(result.rows)
 
     console.log(result.fields)
+    
     //res.send({'lastname': 'TOTO', 'message' : 'ceci est un example'})
 
     res.json(result.rows);
@@ -54,14 +55,23 @@ app.get('/companies/:id', async (req, res) => {
   //res.send({'lastname': 'TOTO', 'message' : 'ceci est un example'})
 })
 
+async function fetchDbCompanies() {
+    const query = 'SELECT * FROM company';
+    const result =  await client.query(query);
+    console.log("dans la fonction")
+    console.log(result.rows)
+    //res.send({'lastname': 'TOTO', 'message' : 'ceci est un example'})
+    return result
+}
+
 app.get('/companies', async (req, res) => {
   console.log("GET /companies")
   try {
     const query = 'SELECT * FROM company';
     const result =  await client.query(query);
     console.log(result.rows)
-    //res.send({'lastname': 'TOTO', 'message' : 'ceci est un example'})
-
+    // //res.send({'lastname': 'TOTO', 'message' : 'ceci est un example'})
+    //resultFetch = process.nextTick(fetchDbCompanies)
     res.json(result.rows);
   } catch (err) {
     console.error(err);

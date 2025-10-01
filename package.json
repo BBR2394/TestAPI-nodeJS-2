@@ -28,6 +28,6 @@
     "pg": "^8.14.0"
   },
   "devDependencies": {
-    "@types/node": "^22.13.1"
+    "@types/node": "^22.18.8"
   }
 }
